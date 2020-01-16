@@ -209,3 +209,14 @@ func (oe *InfixExpression) String() string {
 }
 
 func (oe *InfixExpression) expressionNode() {}
+
+// Boolean structure
+type Boolean struct {
+	Token token.Token
+	Value bool
+}
+
+// TokenLiteral for boolean expression
+func (b *Boolean) TokenLiteral() string { return b.Token.Literal }
+func (b *Boolean) String() string       { return b.Token.Literal }
+func (b *Boolean) expressionNode()      {}
